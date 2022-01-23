@@ -46,7 +46,7 @@ th, td {
 .form-input {
     display: flex;
     justify-content: space-between;
-    width: 24%;
+    width: 26%;
     margin: .5rem;
 }
 

@@ -21,8 +21,12 @@
                 <input type="email" name="email" id="" class="text-input">
             </div>
             <div class="form-input">
+                <label for="">Profile Image</label>
+                <input type="file" name="image" id="" style="margin-left: 22%;">
+            </div>
+            <div class="form-input">
                 <label for="">Gender</label>
-                <input type="radio" name="gender" id="" value="m" checked="checked"> Male  
+                <input type="radio" name="gender" id="" value="m" checked="checked" style="margin-left: 22%;"> Male  
                 <input type="radio" name="gender" id="" value="f"> Female
             </div>
             <div class="form-input">
