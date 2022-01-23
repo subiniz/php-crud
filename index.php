@@ -42,7 +42,7 @@ require 'database.php';
                             <td>
                                 <!-- Pass the user $id via GET method in url -->
                                 <a href="update.php?id=<?php echo $id; ?>">Update</a> | 
-                                <a href=""> Delete</a>
+                                <a onclick="return confirm('Are You Sure?');" href="delete.php?id=<?php echo $id; ?>"> Delete</a>
                             </td>
                         </tr>
                         <?php

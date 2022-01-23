@@ -6,40 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Box Model</title>
     <style>
-        span {
-            border: 5px greenyellow solid; /* Width Color Type*/
-            border-radius: 20px;
-            margin: 10px 20px 30px 100px;
-            padding: 10px; /* Top Right Bottom Left*/
-            font-size: 50px;
+        body {
+            font-family: 'Times New Roman', Times, serif
         }
-        p {
-            margin: 30px 20px 30px 100px; 
+
+        .box {
+            height: 50px;
+            width: 50px;
+            float: left;
+            border-radius: 5px;
+            margin-right: 25px;
         }
-        h1 {
-            margin-left: 100px;
-        } 
-        .btn {
-            background-color: rgb(201, 160, 160);
-            padding: 4px;
-            border-radius: 2px;
-            border: 0;
-            color: honeydew;
+
+        #red {
+            background-color: red;
+        }
+
+        #yellow {
+            background-color: yellow;
+            clear: left;
+        }
+
+        #green {
+            background-color: green;
+            /* float: left; */
+            clear: left;
+        }
+
+        #blue {
+            background-color: blue;
+            /* float: left; */
+            clear: left;
         }
     </style>
 </head>
 <body>
-    <h1>
-        Heading
-    </h1>
-    <span>
-        Box Model
-    </span>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, quam. Recusandae, ea quam aspernatur debitis eos a praesentium et aliquam, architecto, possimus facere aut dolorem veritatis? Quidem vero maiores facere?</p>
-    <button class="btn">Next</button>
-
-    <br>
-
-    <button>Next</button>
+<div class="container">
+    <h1>Heading 1</h1>
+    <div id="red" class="box"></div>
+    <div id="yellow" class="box"></div>
+    <div id="green" class="box"></div>
+    <div id="blue" class="box"></div>
+</div>
 </body>
 </html>
