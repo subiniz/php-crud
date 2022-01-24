@@ -27,6 +27,7 @@ require 'database.php';
                         <th>Name</th>
                         <th>Email</th>
                         <th>Gender</th>
+                        <th>Image</th>
                         <th>Action</th>
                     </tr>
                     <?php
@@ -39,6 +40,9 @@ require 'database.php';
                             <td><?php echo $row["email"];?></td>
                             <!-- Ternery Operator -->
                             <td><?php echo $row["gender"] == 'm' ? 'Male' : 'Female';?></td>
+                            <td>
+                                <img src="<?php echo 'images/' . $row['image'] ;?>" alt="<?php echo $row['image']; ?>" class="icon-img">
+                            </td>
                             <td>
                                 <!-- Pass the user $id via GET method in url -->
                                 <a href="update.php?id=<?php echo $id; ?>">Update</a> | 

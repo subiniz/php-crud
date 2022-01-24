@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Insert Form</h1>
-        <form action="insert_process.php" method="POST">
+        <form action="insert_process.php" method="POST" enctype="multipart/form-data">
             <div class="form-input">
                 <label for="">Name</label>
                 <input type="text" name="name" id="" class="text-input">
