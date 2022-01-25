@@ -13,29 +13,35 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $gender = $_POST['gender'];
 $imageName = NULL;
+// echo '<pre>';
+// var_dump($_FILES);
+// die;
 
 if(!empty($_FILES['image']['name'])) { // This checks if the image name is empty or not
-
+    $imageName = $_FILES['image']['name'];
+    $imageType = pathinfo($imageName, PATHINFO_EXTENSION);
+    
     // Validate the extension/type of the image
-    if($imageType == 'png') { // Your Task
-        $imageName = $_FILES['image']['name'];
+    if($imageType == 'png' || $imageType == 'jpeg' || $imageType == 'jpg') { // Your Task
         $tempName = $_FILES['image']['tmp_name'];
         $folder = "images/$imageName";
     } else {
-        echo "Only PNG files are allowed";
+        echo "Only PNG/JPEG/JPG files are allowed";
         die;
     }
 
     // Validate the size of the uploaded image
-    if($imageSize > '1MB') { // Your Task
+    // $imageSize = Find the size of the uploaded image **********;
+    $imageSizeInBytes = $_FILES['image']['size']; // The size will be displayed in Bytes (B > kb > mb > gb)
+    $imageSizeInMegaByte = ($imageSizeInBytes/1024)/1024;
+    // var_dump($imageSizeInMegaByte);
+    // die;
+    if($imageSizeInMegaByte > '1') { // Your Task
         echo "File size too large. Please upload only upto 1MB.";
         die;
     }
     
 }
-// echo '<pre>';
-// var_dump($_FILES);
-// die;
 //UPDATE students SET name = $_POST['name'], email = $_POST['email'] WHERE id = $_POST['id'];
 $sql = "INSERT INTO students (name, email, gender, image) VALUES ('$name', '$email' ,'$gender', '$imageName')";
 
